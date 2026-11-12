@@ -1,6 +1,8 @@
+'use client'
 import { Menu } from '@/components/Menu'
 import PrimaryButton from '@/components/Buttons/PrimaryButton'
 import React from 'react'
+import { useRouter } from 'next/navigation'
 import AlternativeButton from '@/components/Buttons/AlternativeButton'
 import HomeImg from '@/assets/bg-tinta.jpg'
 
@@ -18,6 +20,8 @@ const beneficios = [
 ]
 
 const Home = () => {
+  const router = useRouter()
+
   return (
     <div>
       <Menu />
@@ -28,7 +32,7 @@ const Home = () => {
             <h1 className='text-white text-3xl font-bold lg:text-5xl'>A maior loja de tintas do país!!!</h1>
             <p className='text-neutral-800  font-bold lg:text-2xl'>Tintas para todos os ambientes internos e externos</p>
             <div className='flex flex-col gap-4 lg:flex-row '>
-              <PrimaryButton text="Ver catálogo" />
+              <PrimaryButton text="Ver catálogo" onclick={() => router.push('/catalogo')} />
               <AlternativeButton text='Ver carrinho' />
             </div>
           </div>
@@ -68,7 +72,7 @@ const Home = () => {
         <h2 className='text-white text-3xl font-bold mb-4'>Pronto para mudar a cor da sua casa?</h2>
         <p className='text-neutral-300 mb-8'>Veja o catálogo completo e encontre a cor certa para cada cômodo.</p>
         <div className='flex flex-col gap-4 justify-center lg:flex-row'>
-          <PrimaryButton text="Ver catálogo" />
+          <PrimaryButton text="Ver catálogo" onclick={() => router.push('/catalogo')} />
           <AlternativeButton text='Ver carrinho' />
         </div>
       </section>
