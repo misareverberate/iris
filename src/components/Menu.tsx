@@ -20,7 +20,7 @@ export const Menu = () => {
             <div className='px-10 w-full h-full m-auto flex justify-between items-center lg:px-40'>
                 <img className="w-20 " src={Logo.src} alt="Uma logo em formato de arco-irís" />
                 <div className='hidden lg:flex items-center gap-4'>
-                    <ThirdButton text='Home'/>
+                    <ThirdButton text='Home' onclick={() => { setMenu(false); router.push('/') }}/>
                     <ThirdButton text='Catálogo' onclick={() => { setMenu(false); router.push('/catalogo') }}/>
                     <SecondButton text='Cadastrar nova cor' icon={<ControlPointOutlinedIcon />} type='button'/>
                     <PrimaryButton text="Conta" icon={<AccountCircleOutlinedIcon />} type="button" onclick={() => alert("Clicou na conta")}/>
@@ -32,7 +32,7 @@ export const Menu = () => {
             {menu && (
             <div className='bg-white w-full h-[calc(100vh-5rem)] fixed top-20 pb-4'>
                 <div className='flex flex-col gap-2 px-20'>
-                    <ThirdButton text='Home'/>
+                    <ThirdButton text='Home' onclick={() => { setMenu(false); router.push('/') }}/>
                     <ThirdButton text='Catálogo' onclick={() => { setMenu(false); router.push('/catalogo') }}/>
                     <SecondButton text='Cadastrar nova cor' icon={<ControlPointOutlinedIcon />} type='button'/>
                     <PrimaryButton text="Conta" icon={<AccountCircleOutlinedIcon />} type="button" onclick={() => alert("Clicou na conta")}/>
