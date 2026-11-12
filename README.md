@@ -1,11 +1,44 @@
 # Irís — Loja de Tintas
 
-Mockup de front-end de uma loja de tintas, feito com Next.js (App Router),
-React, TypeScript, Tailwind CSS e Material UI. Não tem dados nem backend: é
-só a interface, pensada para visualização. O nome e o logo são do projeto:
-um arco-íris em formato de tinta.
+Landing page e catálogo de uma loja de tintas fictícia, feitos com React e
+Next.js como exercício da matéria de Web II. O foco do trabalho era criar os
+elementos da interface e fazer o layout funcionar bem em celular, tablet e
+desktop. Não há backend: os dados das cores estão em um arquivo local.
+
+## Sobre o projeto
+
+O trabalho foi feito em cerca de duas semanas, à mão e sem uso de IA. Ele
+pedia páginas com componentes React, estilização com Tailwind e layout
+responsivo. O logo, a paleta laranja e os textos são criações do projeto, e a
+loja é fictícia.
+
+## O que tem
+
+- **Home (`/`):** barra superior com logo e menu, seção principal com a
+  chamada "A maior loja de tintas do país!!!", cores em destaque, três
+  blocos de benefícios, uma chamada para o catálogo e rodapé.
+- **Catálogo (`/catalogo`):** lista de 8 cores com filtro por ambiente
+  (Todas, Interna e Externa). O filtro ativo fica destacado e a contagem
+  de cores muda a cada escolha.
+- **Menu responsivo:** em telas grandes, os links aparecem na barra. Em
+  telas menores, eles ficam atrás de um botão de hambúrguer.
+- **Navegação:** os itens "Home" e "Catálogo" do menu e os botões "Ver
+  catálogo" levam às páginas correspondentes.
+
+## O que não tem
+
+Estas partes ficaram de fora porque não faziam parte do objetivo do
+trabalho:
+
+- **Botão "Conta":** mostra um aviso no navegador, sem tela de login.
+- **Botão "Cadastrar nova cor":** não abre formulário nem salva nada.
+- **Botão "Ver carrinho":** não leva a nenhuma página e não guarda produtos.
+- **Backend e dados reais:** não há banco, API nem autenticação. A lista de
+  cores fica em `src/data/cores.ts`.
 
 ## Como rodar
+
+Requisitos: Node.js 18 ou mais recente.
 
 ```bash
 npm install
@@ -14,19 +47,19 @@ npm run dev
 
 Acesse [http://localhost:3000](http://localhost:3000).
 
-Para checar a build de produção:
+Para gerar a build de produção:
 
 ```bash
 npm run build
 ```
 
-## Páginas
+## Tecnologias
 
-- **Home (`/`):** barra superior com logo, links e botões, e a seção
-  principal com a chamada "A maior loja de tintas do país!!!".
-
-Os botões do menu e da home (Catálogo, Cadastrar nova cor, Conta, Ver
-catálogo, Ver carrinho) são visuais: ainda não levam a nenhuma página.
+- Next.js 14 com App Router
+- React 18 e TypeScript
+- Tailwind CSS 3, para estilização e responsividade
+- Material UI 5 (`@mui/material` e `@mui/icons-material`), para o botão do
+  menu e os ícones
 
 ## Estrutura
 
@@ -45,7 +78,7 @@ src/
 │   └── Menu.tsx      # barra superior com menu responsivo
 ├── data/
 │   └── cores.ts      # lista de cores usada pela home e pelo catálogo
-└── pages/
+└── views/
     ├── Catalogo.tsx  # conteúdo da página de catálogo
     └── Home.tsx      # conteúdo da página inicial
 ```
