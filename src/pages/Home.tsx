@@ -12,7 +12,7 @@ const Home = () => {
           <div className='flex flex-col px-4 text-center mb-5 lg:w-1/2 gap-4 lg:text-left'>
             <p className='text-neutral-800 font-bold lg:text-2xl'>Todas as cores da sua imaginação, para seu lar</p>
             <h1 className='text-white text-3xl font-bold lg:text-5xl'>A maior loja de tintas do país!!!</h1>
-            <p className='text-neutral-800  font-bold lg:text-2xl'>Tintas para todos os ambientes internos e internos</p>
+            <p className='text-neutral-800  font-bold lg:text-2xl'>Tintas para todos os ambientes internos e externos</p>
             <div className='flex flex-col gap-4 lg:flex-row '>
               <PrimaryButton text="Ver catálogo" />
               <AlternativeButton text='Ver carrinho' />

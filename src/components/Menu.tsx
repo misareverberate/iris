@@ -24,11 +24,11 @@ export const Menu = () => {
                     <PrimaryButton text="Conta" icon={<AccountCircleOutlinedIcon />} type="button" onclick={() => alert("Clicou na conta")}/>
                 </div>
                 <div className='flex lg:hidden'>
-                    <Button onClick={() => { menu ? setMenu(false) : setMenu(true); }}> {!menu ? <HamburguerIcon/> : <CloseIcon/>} </Button>
+                    <Button onClick={() => setMenu(!menu)}> {!menu ? <HamburguerIcon/> : <CloseIcon/>} </Button>
                 </div>
             </div>
             {menu && (
-            <div className='bg-white w-full h-[100vh-100] fixed top-20 pb-4'>
+            <div className='bg-white w-full h-[calc(100vh-5rem)] fixed top-20 pb-4'>
                 <div className='flex flex-col gap-2 px-20'>
                     <ThirdButton text='Home'/>
                     <ThirdButton text='Catálogo'/>
