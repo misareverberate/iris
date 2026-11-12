@@ -32,7 +32,7 @@ const Catalogo = () => {
         <div className='flex flex-wrap justify-center gap-4'>
           {filtros.map((opcao) => (
             filtro === opcao
-              ? <PrimaryButton key={opcao} text={opcao} onclick={() => setFiltro(opcao)} />
+              ? <div key={opcao} className='border-2 border-transparent rounded-full'><PrimaryButton text={opcao} onclick={() => setFiltro(opcao)} /></div>
               : <SecondButton key={opcao} text={opcao} onclick={() => setFiltro(opcao)} />
           ))}
         </div>
