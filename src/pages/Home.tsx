@@ -5,13 +5,10 @@ import React from 'react'
 import { useRouter } from 'next/navigation'
 import AlternativeButton from '@/components/Buttons/AlternativeButton'
 import HomeImg from '@/assets/bg-tinta.jpg'
+import { Footer } from '@/components/Footer'
+import { produtos } from '@/data/cores'
 
-const coresDestaque = [
-  { nome: 'Laranja Cítrico', tipo: 'Acrílica fosca', cor: 'bg-orange-500' },
-  { nome: 'Amarelo Sol', tipo: 'Acrílica acetinada', cor: 'bg-yellow-400' },
-  { nome: 'Verde Musgo', tipo: 'Acrílica fosca', cor: 'bg-green-700' },
-  { nome: 'Azul Oceano', tipo: 'Látex premium', cor: 'bg-blue-600' },
-]
+const coresDestaque = produtos.filter((item) => item.destaque)
 
 const beneficios = [
   { titulo: 'Para todos os ambientes', texto: 'Tintas para paredes internas e externas, com acabamentos fosco, acetinado e brilhante.' },
@@ -50,7 +47,7 @@ const Home = () => {
               <div className={`${item.cor} h-40`} />
               <div className='p-4'>
                 <p className='font-bold text-neutral-800'>{item.nome}</p>
-                <p className='text-sm text-neutral-500'>{item.tipo}</p>
+                <p className='text-sm text-neutral-500'>{item.acabamento}</p>
               </div>
             </div>
           ))}
@@ -77,10 +74,7 @@ const Home = () => {
         </div>
       </section>
 
-      <footer className='bg-white px-10 py-8 text-center text-neutral-500 lg:px-40'>
-        <p className='font-bold text-neutral-800'>Irís — Loja de Tintas</p>
-        <p className='text-sm'>Todas as cores da sua imaginação, para seu lar.</p>
-      </footer>
+      <Footer />
     </div>
   )
 }

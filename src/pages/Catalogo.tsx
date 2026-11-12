@@ -3,17 +3,8 @@ import { Menu } from '@/components/Menu'
 import PrimaryButton from '@/components/Buttons/PrimaryButton'
 import SecondButton from '@/components/Buttons/SecondButton'
 import React, { useState } from 'react'
-
-const produtos = [
-  { nome: 'Laranja Cítrico', acabamento: 'Acrílica fosca', ambiente: 'Interna', cor: 'bg-orange-500' },
-  { nome: 'Amarelo Sol', acabamento: 'Acrílica acetinada', ambiente: 'Interna', cor: 'bg-yellow-400' },
-  { nome: 'Verde Musgo', acabamento: 'Acrílica fosca', ambiente: 'Interna', cor: 'bg-green-700' },
-  { nome: 'Roxo Ametista', acabamento: 'Esmalte brilhante', ambiente: 'Interna', cor: 'bg-purple-600' },
-  { nome: 'Rosa Algodão', acabamento: 'Acrílica acetinada', ambiente: 'Interna', cor: 'bg-pink-300' },
-  { nome: 'Azul Oceano', acabamento: 'Látex premium', ambiente: 'Externa', cor: 'bg-blue-600' },
-  { nome: 'Vermelho Carmim', acabamento: 'Látex premium', ambiente: 'Externa', cor: 'bg-red-600' },
-  { nome: 'Cinza Grafite', acabamento: 'Esmalte brilhante', ambiente: 'Externa', cor: 'bg-neutral-600' },
-]
+import { Footer } from '@/components/Footer'
+import { produtos } from '@/data/cores'
 
 const filtros = ['Todas', 'Interna', 'Externa']
 
@@ -54,10 +45,7 @@ const Catalogo = () => {
         </div>
       </section>
 
-      <footer className='bg-white px-10 py-8 text-center text-neutral-500 lg:px-40'>
-        <p className='font-bold text-neutral-800'>Irís — Loja de Tintas</p>
-        <p className='text-sm'>Todas as cores da sua imaginação, para seu lar.</p>
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -32,11 +32,20 @@ catálogo, Ver carrinho) são visuais: ainda não levam a nenhuma página.
 
 ```
 src/
-├── app/            # layout, página inicial, fontes e estilos globais
-├── assets/         # logo, imagem da home
+├── app/
+│   ├── catalogo/
+│   │   └── page.tsx  # rota /catalogo
+│   ├── page.tsx      # rota /
+│   ├── layout.tsx    # layout raiz e fontes
+│   └── globals.css   # estilos globais e cores de fundo
+├── assets/           # logo e imagem da home
 ├── components/
-│   ├── Buttons/    # botões primário, secundário, terciário e alternativo
-│   └── Menu.tsx    # barra superior com menu responsivo
+│   ├── Buttons/      # botões primário, secundário, terciário e alternativo
+│   ├── Footer.tsx    # rodapé compartilhado
+│   └── Menu.tsx      # barra superior com menu responsivo
+├── data/
+│   └── cores.ts      # lista de cores usada pela home e pelo catálogo
 └── pages/
-    └── Home.tsx    # conteúdo da página inicial
+    ├── Catalogo.tsx  # conteúdo da página de catálogo
+    └── Home.tsx      # conteúdo da página inicial
 ```
