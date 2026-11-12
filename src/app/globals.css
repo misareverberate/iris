@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.bg-gradient{
+  background: rgb(255,185,32);
+  background: linear-gradient(180deg, rgba(255,185,32,1) 0%, rgba(186,115,0,1) 100%);
+  /*
+  background: rgb(29, 78, 216);
+  background: linear-gradient(0deg, rgb(14, 41, 117, 1) 0%,  rgb(29, 78, 216, 1) 100%) 
+  /*background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(65,109,235,1) 100%);*/
+}
